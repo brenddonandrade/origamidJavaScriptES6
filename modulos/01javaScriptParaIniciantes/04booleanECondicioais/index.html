@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04booleanECondicionais</title>
+  </head>
+  <body>
+    <header>
+      <h1>JavaScript para Iniciantes</h1>
+      <p>Boolean e Condicionais</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Boolean</h2>
+        <p>
+          Existem dois valores booleanos <strong>true</strong> e
+          <strong>false</strong>.
+        </p>
+        <p>var possuiGraduacao = true;</p>
+        <p>var possuiDoutorado = false;</p>
+      </section>
+
+      <section>
+        <h2>Truthy e Falsy</h2>
+        <p>
+          Existem valores que retornam <strong>true</strong> e outros que
+          retornam <strong>false</strong> quando verificados em uma expressão
+          booleana.
+        </p>
+        // Falsy
+        <p>if(false)</p>
+        <p>if(0) // ou -0</p>
+        <p>if(NaN)</p>
+        <p>if(null)</p>
+        <p>if(undefined)</p>
+        <p>if('') // ou "" ou ``</p>
+        <p><strong>Todo o resto é truthy.</strong></p>
+      </section>
+
+      <section>
+        <h2>Operador lógico de negação</h2>
+        <p>
+          O operador <strong>!</strong> nega uma expressão booleana. Ou seja,
+          <strong>'!true'</strong> retorna <strong>'false'</strong>.
+        </p>
+        // Truthy
+        <p>if(!true) // false</p>
+        <p>if(!1) // false</p>
+        <p>if(!'') // true</p>
+        <p>if(!undefined) // true</p>
+        <p>if(!!' ') // true</p>
+        <p>if(!!'') // false</p>
+        <p>
+          Você pode usar '!!' para verificar se uma expressão é Truthy ou Falsy.
+        </p>
+      </section>
+
+      <section>
+        <h2>Operador de comparação '==' e '==='</h2>
+        <p>
+          O operador '==' faz uma comparação não tão estrita, ou seja, pode ser
+          de tipo de dado diferente. Enquanto que, '===' também considera o tipo
+          de dado.
+        </p>
+
+        <p>10 == '10'; // true</p>
+        <p>10 == 10; // true</p>
+        <p>10 === '10'; // false</p>
+        <p>10 === 10 // true</p>
+        <p>10 != 15 // true</p>
+        <p>10 != '10' // false</p>
+        <p>10 !== '10' // true</p>
+      </section>
+
+      <section>
+        <h2>Operadores lógicos &&</h2>
+        <p>
+          O operador <strong>&&</strong> compara se uma expressão
+          <strong>e</strong> a outra são verdadeiras.
+        </p>
+        <p>true && true; // true</p>
+        <p>true && false; // false</p>
+        <p>false && true; // false</p>
+        <p>'Gato' && 'Cão'; // 'Cão'</p>
+        <p>(5 - 5) && (5 + 5); // 0</p>
+        <p>'Gato' && false; // false</p>
+        <p>(5 >= 5) && (3 < 6); // true</p>
+
+        <p>
+          Se ambos os valores forem true, ele irá retornar o
+          <strong>último</strong> valor verificado. Se algum valor for false,
+          ele irá retornar o mesmo e não irá continuar verificando os demais.
+        </p>
+      </section>
+
+      <section>
+        <h2>Operadores Lógicos ||</h2>
+        <p>
+          O operador <strong>||</strong> compara se uma expressão
+          <strong>ou</strong> outro são verdadeiras.
+        </p>
+        <p>true || true; // true</p>
+        <p>true || false; // true</p>
+        <p>false || true; // true</p>
+        <p>'Gato' || 'Cão'; // 'Gato'</p>
+        <p>(5 - 5) || (5 + 5); // 10</p>
+        <p>'Gato' || false; // Gato</p>
+        <p>(5 >= 5) || (3 < 6); // true</p>
+        <p>Retorna o <strong>primeiro</strong> valor true que encontrar.</p>
+      </section>
+
+      <section>
+        <h2>Exercícios</h2>
+        <p>// Verifique se a sua idade é maior do que a de algum parente</p>
+        <p>
+          // Dependendo do resultado coloque no console 'É maior', 'É igual' ou
+          'É menor'
+        </p>
+
+        <p>// Qual valor é retornado na seguinte expressão?</p>
+        <p>var expressao = (5 - 2) && (5 - ' ') && (5 - 2);</p>
+
+        <p>// Verifique se as seguintes variáveis são Truthy ou Falsy</p>
+        <p>var nome = 'Andre';</p>
+        <p>var idade = 28;</p>
+        <p>var possuiDoutorado = false;</p>
+        <p>var empregoFuturo;</p>
+        <p>var dinheiroNaConta = 0;</p>
+
+        <p>
+          // Compare o total de habitantes do Brasil com China (valor em
+          milhões)
+        </p>
+        <p>var brasil = 207;</p>
+        <p>var china = 1340;</p>
+
+        <p>// O que irá aparecer no console?</p>
+        <p>if(('Gato' === 'gato') && (5 > 2)) {</p>
+        <p>console.log('Verdadeiro');</p>
+        <p>} else {</p>
+        <p>console.log('Falso');</p>
+        <p>}</p>
+
+        <p>// O que irá aparecer no console?</p>
+        <p>if(('Gato' === 'gato') || (5 > 2)) {</p>
+        <p>console.log('Gato' && 'Cão');</p>
+        <p>} else {</p>
+        <p>console.log('Falso');</p>
+        <p>}</p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
