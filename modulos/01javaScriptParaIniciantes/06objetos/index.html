@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06objetos</title>
+  </head>
+  <body>
+    <header>
+      <h1>JavaScript para Iniciantes</h1>
+      <p>Objetos</p>
+    </header>
+    <main>
+      <section>
+        <h2>Objetos</h2>
+        <p>
+          Conjunto de variáveis e funções que são chamadas de propriedades e
+          métodos. São instância de criadas a partir de uma classe.
+        </p>
+
+        <pre><code>
+            var pessoa = {
+                nome: 'André',
+                idade: 28,
+                profissao: 'Designer',
+                possuiFaculdade: true,
+              }
+              
+              pessoa.nome; // 'André'
+              pessoa.possuiFaculdade; // true
+              
+        </code></pre>
+        <p>Propriedades e métodos consistem em nome (chave) e valor.</p>
+      </section>
+
+      <section>
+        <h2>Métodos</h2>
+        <p>É uma propriedade que possui uma função no local de seu valor.</p>
+        <pre>
+          <code>
+            var quadrado = {
+              lados: 4,
+              area: function(lado) {
+                return lado * lado;
+              },
+              perimetro: function(lado) {
+                return this.lados * lado;
+              },
+            }
+            
+            quadrado.lados; // 4
+            quadrado.area(5); // 25
+            quadrado.perimetro(5); // 20
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h2>Métodos</h2>
+        <p>Abreviação de <strong>area: function(){}</strong> para <strong>area(){}</strong>, no ES6+.</p>
+        <pre>
+          <code>
+            var quadrado = {
+              lados: 4,
+              area(lado) {
+                return lado * lado;
+              },
+              perimetro(lado) {
+                return this.lados * lado;
+              },
+            }
+          </code>
+        </pre>
+
+      </section>
+
+      <section>
+        <h2>Organizar o código</h2>
+        <p>Objetos servem para organizar o código em pequenas partes reutilizáveis, bem como implementar o paradigma da <strong>Programação Orientada a Objetos</strong>(POO).</p>
+        <pre>
+          <code>
+            Math.PI; // 3.14
+            Math.random(); // número aleatório
+
+            var pi = Math.PI;
+            console.log(pi); // 3.14
+
+          </code>
+        </pre>
+        <p><strong>Math</strong> é um objeto nativo de JavaScript, como é o <strong>console</strong> que utilizamos para exibir nossas mensagens em conjunto com o método <strong>log()</strong>.</p>
+      </section>
+
+      <section>
+        <p>Um objeto é criado utilizando as chaves <strong>{}</strong>.</p>
+        <pre>
+          <code>
+            var carro = {};
+            var pessoa = {};
+
+            console.log(typeof carro); // 'object'
+
+          </code>
+        </pre>
+      </section>
+      
+      <section>
+        <h2>Palavra-chave This</h2>
+        <p><strong>this</strong> irá fazer uma referência ao próprio objeto.</p>
+        <pre>
+          <code>
+            var height = 120;
+            var menu = {
+              width: 800,
+              height: 50,
+              metadeHeight() {
+                return this.height / 2;
+              }
+            }
+
+            menu.metadeHeight(); // 25
+            // sem o this, seria 60
+
+          </code>
+        </pre>
+        <p><strong>this</strong> irá retorar o próprio objeto.</p>
+      </section>
+
+      <section>
+        <h2>Protótipo e herança</h2>
+        <p>O objeto herda propriedades e métodos do objeto que foi utilizado para criar o mesmo. Herda esses métodos da classe pai.</p>
+
+        <pre>
+          <code>
+            var menu = {
+              width: 800,
+            }
+            
+            menu.hasOwnProperty('width') // true
+            menu.hasOwnProperty('height') // false
+          </code>
+        </pre>
+
+        <p><strong>hasOwnProperty</strong> é um método de <strong>Object</strong>.</p>
+      </section>
+
+      <section>
+        <h2>Exercícios</h2>
+        <pre><code>
+          // Crie um objeto com os seus dados pessoais
+          // Deve possui pelo menos duas propriedades nome e sobrenome
+
+          // Crie um método no objeto anterior, que mostre o seu nome completo
+
+          // Modifique o valor da propriedade preco para 3000
+          var carro = {
+            preco: 1000,
+            portas: 4,
+            marca: 'Audi',
+          }
+
+          // Crie um objeto de um cachorro que represente um labrador,
+          // preto com 10 anos, que late ao ver um homem
+
+
+        </code></pre>
+      </section>
+
+
+      <section></section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
