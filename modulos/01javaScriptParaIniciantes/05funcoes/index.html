@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05funcoes</title>
+  </head>
+  <body>
+    <header>
+      <h1>JavaScript para Iniciantes</h1>
+      <p>Funções</p>
+    </header>
+    <main>
+      <section>
+        <h2>Funções</h2>
+        <p>
+          Bloco de código que pode ser executado e reutilizado. Pode receber e
+          retornar valores.
+        </p>
+        <p>A palavra reservada <strong>function</strong> declara uma função.</p>
+        <p>function areaQuadrado(lado) {</p>
+        <p>return lado * lado;</p>
+        <p>}</p>
+
+        <p>areaQuadrado(4) // 16</p>
+        <p>areaQuadrado(5) // 25</p>
+        <p>areaQuadrado(2) // 4</p>
+      </section>
+
+      <section>
+        <h2>Argumentos podem ser funções</h2>
+        <p>
+          Chamadas de callback, geralmente são funções que ocorrem após algum
+          evento.
+        </p>
+
+        <p>addEventListener('click', function() {</p>
+        <p>console.log('Clicou');</p>
+        <p>});</p>
+        <p>// A função possui dois argumentos</p>
+        <p>// Primeiro é a string 'click'</p>
+        <p>// Segundo é uma função anônima</p>
+        <p>
+          Funçõe anônimas são aquelas em que o nome da função não é definido,
+          escritas como <strong>function() {}</strong> ou
+          <strong>()=> {}</strong>.
+        </p>
+      </section>
+
+      <section>
+        <h2>Escopo</h2>
+        <p>
+          Variáveis e funções definidas dentro de um bloco
+          <strong>{}</strong> não são visíveis fora dele.
+        </p>
+      </section>
+
+      <section>
+        <h2>Escopo Léxico</h2>
+        <p>
+          Funções conseguem acessar variáveis que foram criadas no contexto pai.
+        </p>
+      </section>
+
+      <section>
+        <h2>Hoisting</h2>
+        <p>
+          Antes de executar uma função, O JS 'move' todas as funções declaradas
+          para a memória. Ou seja, mesmo que o código da mesma seja escrito
+          abaixo, ela é reconhecida no início do arquivo.
+        </p>
+      </section>
+
+      <section>
+        <h2>Exercícios</h2>
+        <p>// Crie uma função para verificar se um valor é Truthy</p>
+
+        <p>
+          // Crie uma função matemática que retorne o perímetro de um quadrado
+        </p>
+        <p>// lembrando: perímetro é a soma dos quatro lados do quadrado</p>
+
+        <p>// Crie uma função que retorne o seu nome completo</p>
+        <p>// ela deve possuir os parâmetros: nome e sobrenome</p>
+
+        <p>// Crie uma função que verifica se um número é par</p>
+
+        <p>// Crie uma função que retorne o tipo de</p>
+        <p>// dado do argumento passado nela (typeof)</p>
+
+        <p>// addEventListener é uma função nativa do JavaScript</p>
+        <p>
+          // o primeiro parâmetro é o evento que ocorre e o segundo o Callback
+        </p>
+        <p>
+          // utilize essa função para mostrar no console o seu nome completo
+        </p>
+        <p>// quando o evento 'scroll' ocorrer.</p>
+
+        <p>// Corrija o erro abaixo</p>
+        <p>function precisoVisitar(paisesVisitados) {</p>
+        <p>var totalPaises = 193;</p>
+        <p>
+          return `Ainda faltam ${totalPaises - paisesVisitados} países para
+          visitar`;
+        </p>
+        <p>}</p>
+        <p>function jaVisitei(paisesVisitados) {</p>
+        <p>
+          return `Já visitei ${paisesVisitados} do total de ${totalPaises}
+          países`;
+        </p>
+        <p>}</p>
+        <p>precisoVisitar(20);</p>
+        <p>jaVisitei(20);</p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
