@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07tudoEObjeto</title>
+</head>
+<body>
+    <header>
+        <h1>JavaScript para Iniciantes</h1>
+        <p>Tudo é Objeto</p>
+    </header>
+    <main>
+        <section>
+            <h2>Tudo é Objeto</h2>
+            <p>Strings, números, boolean, objetos e mais, possuem propriedades e métodos. Por isto, são objetos.</p>
+            <pre>
+                <code>
+                    var nome = 'André';
+                    nome.length; // 5
+                    nome.charAt(1); // 'n'
+                    nome.replace('ré', 'rei'); // 'Andrei'
+                    nome; // 'André'
+                </code>
+            </pre>
+            <p>Uma string herda propriedades e métodos do construtor String().</p>
+        </section>
+
+        <section>
+            <h2>Números</h2>
+            <pre>
+                <code>
+                    var altura = 1.8;
+                    altura.toString(); // '1.8'
+                    altura.toFixed(); // '2'
+                </code>
+            </pre>
+            <p>
+                Por um breve momento o número é envolvido em um Objeto (coerção), tendo acesso assim as suas propriedades e métodos.
+            </p>
+        </section>
+
+        <section>
+            <h2>Funções</h2>
+            <pre>
+                <code>
+                    function areaQuadrado(lado) {
+                        return lado * lado;
+                      }
+                      
+                      areaQuadrado.toString();
+                      //"function areaQuadrado(lado) {
+                      //  return lado * lado;
+                      //}"
+                      
+                      areaQuadrado.length; // 1
+                </code>
+            </pre>
+        </section>
+
+        <section>
+            <h2>Elementos do DOM</h2>
+            <pre>
+                <code>
+                    <a class="btn">Clique</a>
+                    var btn = document.querySelector('.btn');
+                    btn.classList.add('azul') // adiciona a classe azul
+                    btn.innerText; // 'Clique'
+                    btn.addEventListener('click', function() {
+                    console.log('Clicou')
+                    })
+                </code>
+            </pre>
+
+            <p>Praticamente  todos os efeitos com JS são feitos utilizando propriedades e métodos de objetos do DOM.</p>
+        </section>
+
+        <section>
+            <h2>Objetos revolucionaram a programação</h2>
+            <p>Web API's são métodos e propriedades que permitem a interação JavaScript e Browser.</p>
+        </section>
+
+        <section>
+            <h2>Exercícios</h2>
+            <pre>
+                <code>
+                    // nomeie 3 propriedades ou métodos de strings
+                    // nomeie 5 propriedades ou métodos de elementos do DOM
+                    // busque na web um objeto (método) capaz de interagir com o clipboard, 
+                    // clipboard é a parte do seu computador que lida com o CTRL + C e CTRL + V
+                </code>
+            </pre>
+        </section>
+        <section>
+             <!-- The text field -->
+            <input type="text" value="Hello World" id="myInput">
+
+            <!-- The button used to copy the text -->
+            <button onclick="myFunction()">Copy text</button> 
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
